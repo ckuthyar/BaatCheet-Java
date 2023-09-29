@@ -5,19 +5,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sangamone.model.Families;
-import com.sangamone.repository.FamiliesRepo;
+import com.sangamone.model.Users;
+import com.sangamone.repository.UsersRepo;
 
 @RestController
-public class FamiliesController {
+public class UserController {
 	@Autowired
-	FamiliesRepo familiesRepo;
+	UsersRepo usersRepo;
 	
-	@PostMapping("/addMusicFamily")
-	public String addFamily(@RequestBody Families families) {
-		familiesRepo.save(families);
-		return "Success";
+	@PostMapping("/addMusicUsers")
+	public String addUsers(@RequestBody Users users) {
+		usersRepo.save(users);
+		return "User added successfully";
 	}
-	
 
 }
