@@ -1,10 +1,15 @@
 package com.sangamone.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.util.Date;
 
 @Entity
 @Table(name="music")
@@ -15,8 +20,14 @@ public class Music {
 	public int music_id;
 	public String music_url;
 	public int family_id;
-	public String created_on;
-	public int created_by;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = false)
+	public Date created_on;
+	
+	@PrePersist
+	private void onCreate() {
+		created_on = new Date();
+	}
 	public int getMusic_id() {
 		return music_id;
 	}
@@ -35,18 +46,13 @@ public class Music {
 	public void setFamily_id(int family_id) {
 		this.family_id = family_id;
 	}
-	public String getCreated_on() {
+	public Date getCreated_on() {
 		return created_on;
 	}
-	public void setCreated_on(String created_on) {
+	public void setCreated_on(Date created_on) {
 		this.created_on = created_on;
 	}
-	public int getCreated_by() {
-		return created_by;
-	}
-	public void setCreated_by(int created_by) {
-		this.created_by = created_by;
-	}
+	
 	
 	
 

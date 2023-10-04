@@ -15,7 +15,7 @@ public class Users {
 	private int user_id;
 	private String user_name;
 	private int family_id;
-	private String is_admin;
+	private String email;
 	public int getUser_id() {
 		return user_id;
 	}
@@ -34,11 +34,11 @@ public class Users {
 	public void setFamily_id(int family_id) {
 		this.family_id = family_id;
 	}
-	public String getIs_admin() {
-		return is_admin;
+	public String getEmail() {
+		return email;
 	}
-	public void setIs_admin(String is_admin) {
-		this.is_admin = is_admin;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	
