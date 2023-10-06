@@ -18,8 +18,15 @@ public class UserController {
 	@Autowired
 	UsersRepo usersRepo;
 	
+	private String generatedPasscode() {
+		return String.valueOf((int)(Math.random()*900000)+100000);
+	}
+	
 	@PostMapping("/addMusicUserByFamilyId/{family_id}")
-	public String addUsers(@RequestBody Users users, @PathVariable("family_id") int family_id) {
+	public String addUsers(@RequestBody Users users, @PathVariable("family_id") int family_id, String user_name, String email) {
+		String passcode=generatedPasscode();
+		users.setPasscode(passcode);
+	
 		users.setFamily_id(family_id);
 		usersRepo.save(users);
 		return "User added successfully";

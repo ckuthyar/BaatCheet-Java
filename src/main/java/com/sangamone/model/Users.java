@@ -16,6 +16,7 @@ public class Users {
 	private String user_name;
 	private int family_id;
 	private String email;
+	private String passcode;
 	public int getUser_id() {
 		return user_id;
 	}
@@ -40,6 +41,14 @@ public class Users {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getPasscode() {
+		return passcode;
+	}
+	public void setPasscode(String passcode) {
+		this.passcode = passcode;
+	}
+	
+	
 	
 	
 	
