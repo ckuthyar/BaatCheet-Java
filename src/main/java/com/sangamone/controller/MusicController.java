@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sangamone.model.Families;
+import com.sangamone.model.FamilyMusic;
 import com.sangamone.model.Music;
+import com.sangamone.model.Users;
+import com.sangamone.repository.FamiliesRepo;
 import com.sangamone.repository.MusicRepo;
 
 @RestController
@@ -17,11 +21,21 @@ public class MusicController {
 	@Autowired
 	MusicRepo musicRepo;
 	
-	@PostMapping("/addMusicContentByFamilyId/{family_id}")
-	public String addMusicContent(@RequestBody Music music,@PathVariable("family_id") int family_id) {
-		music.setFamily_id(family_id);
-		musicRepo.save(music);
-		return "Music Content added successfully";
+	@Autowired
+	FamiliesRepo familiesRepo;
+	
+	@PostMapping("/addMusicContentByFamilyName")
+	public String addMusicContent(@RequestBody FamilyMusic familyMusic) {
+		String result="Family not found";
+		Families fam=familiesRepo.addMusicUserByFamilyName(familyMusic.getFamily_name());
+		if (fam!=null) {
+			Music music = new Music();
+			music.setMusic_url(familyMusic.getMusic_url());
+			music.setFamily_id(fam.getFamily_id());
+			musicRepo.save(music);
+		}
+		result="Music Content added successfully";
+		return result;
 	}
 	
 	@GetMapping("/getMusicContents")

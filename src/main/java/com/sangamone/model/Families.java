@@ -1,5 +1,6 @@
 package com.sangamone.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,9 @@ public class Families {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
 	private int family_id;
+	@Column(nullable=false)
 	private String family_name;
+	@Column(nullable=false)
 	private String music_hour;
 	public int getFamily_id() {
 		return family_id;

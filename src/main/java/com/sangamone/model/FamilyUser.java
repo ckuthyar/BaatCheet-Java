@@ -1,27 +1,34 @@
 package com.sangamone.model;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="users")
-public class Users {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	private int user_id;
-	@Column(nullable=false)
-	private String user_name;
+public class FamilyUser {
 	private int family_id;
-	@Column(nullable=false)
-	private int is_admin;
-	@Column(nullable=false)
+	private String family_name;
+	private String music_hour;
+	private int user_id;
+	private String user_name;
 	private String email;
+	private int is_admin;
 	private String passcode;
+	public int getFamily_id() {
+		return family_id;
+	}
+	public void setFamily_id(int family_id) {
+		this.family_id = family_id;
+	}
+	public String getFamily_name() {
+		return family_name;
+	}
+	public void setFamily_name(String family_name) {
+		this.family_name = family_name;
+	}
+	public String getMusic_hour() {
+		return music_hour;
+	}
+	public void setMusic_hour(String music_hour) {
+		this.music_hour = music_hour;
+	}
 	public int getUser_id() {
 		return user_id;
 	}
@@ -33,12 +40,6 @@ public class Users {
 	}
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
-	}
-	public int getFamily_id() {
-		return family_id;
-	}
-	public void setFamily_id(int family_id) {
-		this.family_id = family_id;
 	}
 	public String getEmail() {
 		return email;
@@ -58,10 +59,5 @@ public class Users {
 	public void setIs_admin(int is_admin) {
 		this.is_admin = is_admin;
 	}
-	
-	
-	
-	
-	
 
 }

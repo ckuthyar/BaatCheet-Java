@@ -18,6 +18,7 @@ public class Music {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
 	public int music_id;
+	@Column(nullable=false)
 	public String music_url;
 	public int family_id;
 	@Temporal(TemporalType.TIMESTAMP)
