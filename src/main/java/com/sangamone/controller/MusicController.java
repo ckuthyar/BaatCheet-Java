@@ -33,8 +33,8 @@ public class MusicController {
 			music.setMusic_url(familyMusic.getMusic_url());
 			music.setFamily_id(fam.getFamily_id());
 			musicRepo.save(music);
-		}
 		result="Music Content added successfully";
+		}
 		return result;
 	}
 	

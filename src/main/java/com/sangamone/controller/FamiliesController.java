@@ -18,9 +18,10 @@ public class FamiliesController {
 	FamiliesRepo familiesRepo;
 	
 	@PostMapping("/addMusicFamily")
-	public String addFamily(@RequestBody Families families) {
-		familiesRepo.save(families);
-		return "Success";
+	public Families addFamily(@RequestBody Families families) {
+		return familiesRepo.save(families);
+		
+		
 	}
 	
 	@GetMapping("/getMusicFamilies")

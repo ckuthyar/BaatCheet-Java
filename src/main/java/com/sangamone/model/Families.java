@@ -14,7 +14,8 @@ public class Families {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
 	private int family_id;
-	@Column(nullable=false)
+	
+	@Column(unique=true, nullable=false)
 	private String family_name;
 	@Column(nullable=false)
 	private String music_hour;
