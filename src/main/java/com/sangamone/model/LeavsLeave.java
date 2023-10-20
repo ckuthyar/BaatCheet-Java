@@ -12,6 +12,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.UpdateTimestamp;
+
 @Entity
 @Table(name = "leavs_leave")
 public class LeavsLeave {
@@ -26,13 +28,11 @@ public class LeavsLeave {
 	private int requested_by;
 	private int approved_by;
 	
+	@UpdateTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(nullable=false)
+	@Column(name="updated_on")
 	private Date updated_on;
-	@PrePersist
-	private void updateDate() {
-		updated_on=new Date();
-	}
+	
 	public int getLeave_id() {
 		return leave_id;
 	}

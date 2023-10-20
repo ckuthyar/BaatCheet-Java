@@ -1,7 +1,6 @@
 package com.sangamone.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,12 +18,21 @@ public class LeavsLeaveController {
 	public String applyLeave(@RequestBody LeavsLeave leavsLeave) {
 		return leavsLeaveDao.applyLeave(leavsLeave);
 	}
-	/*
-	 * @PutMapping("/approveLeave/{leave_id}") public String
-	 * approveLeave(@RequestBody LeavsLeave leavsLeave, @PathVariable int leave_id)
-	 * { return leavsLeaveDao.approveLeave(leavsLeave, leave_id);
-	 * 
-	 * }
-	 */
+	
+	 @PutMapping("/approveLeave") 
+	 public String approveLeave(@RequestBody LeavsLeave leavsLeave){ 
+		 return leavsLeaveDao.approveLeave(leavsLeave);
+	 }
+	 
+	 @PutMapping("/cancelLeave") 
+	 public String cancelLeave(@RequestBody LeavsLeave leavsLeave){ 
+		 return leavsLeaveDao.cancelLeave(leavsLeave);
+	 }
+	 
+	 @PutMapping("/withdrawLeave") 
+	 public String withdrawLeave(@RequestBody LeavsLeave leavsLeave){ 
+		 return leavsLeaveDao.withdrawLeave(leavsLeave);
+	 }
+	
 
 }

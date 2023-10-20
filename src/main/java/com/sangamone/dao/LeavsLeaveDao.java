@@ -6,6 +6,12 @@ public interface LeavsLeaveDao {
 
 	String applyLeave(LeavsLeave leavsLeave);
 
-	/* String approveLeave(LeavsLeave leavsLeave, int leave_id); */
+	String approveLeave(LeavsLeave leavsLeave);
+
+	String cancelLeave(LeavsLeave leavsLeave);
+
+	String withdrawLeave(LeavsLeave leavsLeave);
+
+	
 
 }

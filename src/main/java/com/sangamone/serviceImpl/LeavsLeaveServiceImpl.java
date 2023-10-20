@@ -19,9 +19,25 @@ public class LeavsLeaveServiceImpl implements LeavsLeaveDao {
 		return "applyLeave successful";
 	}
 
-	/*
-	 * @Override public String approveLeave(LeavsLeave leavsLeave, int leave_id) {
-	 * leavsLeave.setLeave_id(leave_id); leavsLeaveRepo.save(leavsLeave); return
-	 * "ApproveLeave successful"; }
-	 */
+	
+	 @Override 
+	 public String approveLeave(LeavsLeave leavsLeave) {
+		 leavsLeaveRepo.save(leavsLeave); 
+		 return "ApproveLeave successful"; 
+	}
+
+
+	@Override
+	public String cancelLeave(LeavsLeave leavsLeave) {
+		leavsLeaveRepo.save(leavsLeave); 
+		 return "Leave cancelled";
+	}
+
+
+	@Override
+	public String withdrawLeave(LeavsLeave leavsLeave) {
+		leavsLeaveRepo.save(leavsLeave); 
+		 return "Withdrawal successfully";
+	}
+	 
 }
