@@ -1,5 +1,7 @@
 package com.sangamone.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,6 +46,12 @@ public class LoanRequestServiceImpl implements LoanRequestDao{
 		}
 		
 		return result;
+	}
+
+	@Override
+	public List<LoanRequest> viewAllLoanRequest() {
+		
+		return loanRequestRepo.findAll();
 	}
 	
 
