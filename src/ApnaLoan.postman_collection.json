@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "2860ed09-206d-4392-9bba-56961527350d",
+		"name": "ApnaLoan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4907618",
+		"_collection_link": "https://tmpapp.postman.co/workspace/Testing~2c24a4ff-6ed0-4e83-ba1c-b4e2e041c0ee/collection/4907618-2860ed09-206d-4392-9bba-56961527350d?action=share&source=collection_link&creator=4907618"
+	},
+	"item": [
+		{
+			"name": "addCenterDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"center_name\":\"BTM 4\",\r\n    \"center_location\":\"BTM Layout\",\r\n    \"admin\": \"Ananya\",\r\n    \"status\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/addCenterDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"addCenterDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewCentersDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewCentersDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewCentersDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUserDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sheshappa1\",\r\n    \"phone_number\": \"3456645378\",\r\n    \"email\": \"sheshappa@gmail.com\",\r\n    \"aadhar\": \"65432178345678\",\r\n    \"center_name\": \"BTM 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/addUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"addUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllUserDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewAllUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewAllUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addLoanDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"from_user_id\":4,\r\n\"to_user_id\":2,\r\n\"amount\":510,\r\n\"commission\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/addLoanDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"addLoanDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewLoanDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewLoanDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewLoanDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewUserDetailsByCenterId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewUserDetailsByCenterId/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewUserDetailsByCenterId",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLoanDetailsByUserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/getLoanDetailsByUserId/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"getLoanDetailsByUserId",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approveCenter",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"center_name\":\"BTM 4\",\r\n    \"center_id\": 4,\r\n    \"center_location\":\"BTM Layout\",\r\n    \"admin\": \"Ananya\",\r\n    \"status\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/approveCenter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"approveCenter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rejectCenter",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"center_name\":\"BTM 4\",\r\n    \"center_id\": 4,\r\n    \"center_location\":\"BTM Layout\",\r\n    \"admin\": \"Ananya\",\r\n    \"status\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/rejectCenter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"rejectCenter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addLoanProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product\": 5000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/addLoanProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"addLoanProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllLoanProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewAllLoanProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewAllLoanProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAdminDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admin_name\": \"RamaAdmin1\",\r\n    \"admin_phoneno\": \"3456645378\",\r\n    \"admin_email\": \"sheshappa@gmail.com\",\r\n    \"admin_aadhaar\": \"65432178345678\",\r\n    \"center_id\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/addAdminDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"addAdminDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllAdminDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewAllAdminDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewAllAdminDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAdminDetailsByCenterId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewAdminDetailsByCenterId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewAdminDetailsByCenterId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addLoanRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanuser_id\":1,\r\n    \"center_id\":1,\r\n    \"product_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/addLoanRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"addLoanRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewLoanRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewLoanRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewLoanRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addLoanSanctionDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from_loanuser_id\":2,\r\n    \"product_id\":1,\r\n    \"commission\":2,\r\n    \"center_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/addLoanSanctionDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"addLoanSanctionDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllSanctionDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewAllLoanSanctionDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewAllLoanSanctionDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewLoanSanctionDetailsByUserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewLoanSanctionDetailsByUserId/1/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewLoanSanctionDetailsByUserId",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewLoanSanctionDetailsByCenterId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/viewLoanSanctionDetailsByCenterId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"viewLoanSanctionDetailsByCenterId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
