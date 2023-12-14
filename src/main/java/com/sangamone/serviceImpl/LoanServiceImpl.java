@@ -1,5 +1,7 @@
 package com.sangamone.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,12 +42,28 @@ public class LoanServiceImpl implements LoanDao {
 			loan.setFrom_user_id(loanUser.getLoanuser_id());
 			loan.setTo_user_id(loanUser.getLoanuser_id());
 			loan.setProduct_id(loanProduct.getProduct_id());
-			loan.setCommission(loan.getCommission());
+			loan.setCommission(userProductLoan.getCommission());
 			loanRepo.save(loan);
 			result="Loan Sanction Details added successfully";
 		}
 		return result;
 
+	}
+
+	@Override
+	public List<Loan> viewAllLoanDetails() {
+		
+		return loanRepo.findAll();
+	}
+
+	@Override
+	public List<Loan> viewLoanSanctionDetailsByUserId(int from_user_id, int to_user_id) {
+		return loanRepo.viewLoanSanctionDetailsByUserId(from_user_id, to_user_id);
+	}
+
+	@Override
+	public List<Loan> viewLoanSanctionDetailsByCenterId(int center_id) {
+		return loanRepo.viewLoanSanctionDetailsByCenterId(center_id);
 	}
 	
 
