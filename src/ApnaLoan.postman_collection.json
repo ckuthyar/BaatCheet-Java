@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"center_name\":\"BTM 4\",\r\n    \"center_location\":\"BTM Layout\",\r\n    \"admin\": \"Ananya\",\r\n    \"status\": 1\r\n}\r\n",
+					"raw": "{\r\n    \"center_name\":\"JNR-2\",\r\n    \"center_location\":\"Jayanagar\",\r\n    \"admin\": \"Bad Guy\",\r\n    \"status\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -22,12 +22,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/addCenterDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/addCenterDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"addCenterDetails"
 					]
@@ -41,12 +44,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewCentersDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewCentersDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewCentersDetails"
 					]
@@ -61,7 +67,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Sheshappa1\",\r\n    \"phone_number\": \"3456645378\",\r\n    \"email\": \"sheshappa@gmail.com\",\r\n    \"aadhar\": \"65432178345678\",\r\n    \"center_name\": \"BTM 3\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Basappa\",\r\n    \"phoneno\": \"4456645378\",\r\n    \"email\": \"basappa@gmail.com\",\r\n    \"aadhaar\": \"66432178345678\",\r\n    \"center_id\": 4\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,12 +75,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/addUserDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/addUserDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"addUserDetails"
 					]
@@ -88,61 +97,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewAllUserDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewAllUserDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewAllUserDetails"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "addLoanDetails",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"from_user_id\":4,\r\n\"to_user_id\":2,\r\n\"amount\":510,\r\n\"commission\":10\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:9000/addLoanDetails",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"addLoanDetails"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "viewLoanDetails",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:9000/viewLoanDetails",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"viewLoanDetails"
 					]
 				}
 			},
@@ -154,36 +119,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewUserDetailsByCenterId/2",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewUserDetailsByCenterId/3",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewUserDetailsByCenterId",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getLoanDetailsByUserId",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:9000/getLoanDetailsByUserId/1/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"getLoanDetailsByUserId",
-						"1",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -196,7 +143,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"center_name\":\"BTM 4\",\r\n    \"center_id\": 4,\r\n    \"center_location\":\"BTM Layout\",\r\n    \"admin\": \"Ananya\",\r\n    \"status\": 2\r\n}",
+					"raw": "{\r\n    \"center_name\":\"JNR-1\",\r\n    \"center_id\": 4,\r\n    \"center_location\":\"Jayanagar\",\r\n    \"admin\": \"Ananya\",\r\n    \"status\": 2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -204,12 +151,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/approveCenter",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/approveCenter",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"approveCenter"
 					]
@@ -224,7 +174,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"center_name\":\"BTM 4\",\r\n    \"center_id\": 4,\r\n    \"center_location\":\"BTM Layout\",\r\n    \"admin\": \"Ananya\",\r\n    \"status\": 3\r\n}",
+					"raw": "{\r\n    \"center_name\":\"JNR-2\",\r\n    \"center_id\": 5,\r\n    \"center_location\":\"Jayanagar\",\r\n    \"admin\": \"Bad Guy\",\r\n    \"status\": 3\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -232,12 +182,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/rejectCenter",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/rejectCenter",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"rejectCenter"
 					]
@@ -252,7 +205,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"product\": 5000\r\n}",
+					"raw": "{\r\n    \"product\": 6000\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -260,12 +213,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/addLoanProduct",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/addLoanProduct",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"addLoanProduct"
 					]
@@ -279,12 +235,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewAllLoanProducts",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewAllLoanProducts",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewAllLoanProducts"
 					]
@@ -299,7 +258,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"admin_name\": \"RamaAdmin1\",\r\n    \"admin_phoneno\": \"3456645378\",\r\n    \"admin_email\": \"sheshappa@gmail.com\",\r\n    \"admin_aadhaar\": \"65432178345678\",\r\n    \"center_id\": 5\r\n}",
+					"raw": "{\r\n    \"admin_name\": \"ChandraAdmin1\",\r\n    \"admin_phoneno\": \"4456645378\",\r\n    \"admin_email\": \"chandraadmin1@gmail.com\",\r\n    \"admin_aadhaar\": \"65432188345678\",\r\n    \"center_id\": 4\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -307,12 +266,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/addAdminDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/addAdminDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"addAdminDetails"
 					]
@@ -326,12 +288,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewAllAdminDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewAllAdminDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewAllAdminDetails"
 					]
@@ -345,12 +310,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewAdminDetailsByCenterId/1",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewAdminDetailsByCenterId/1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewAdminDetailsByCenterId",
 						"1"
@@ -366,7 +334,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"loanuser_id\":1,\r\n    \"center_id\":1,\r\n    \"product_id\":1\r\n}",
+					"raw": "{\r\n    \"loanuser_id\":2,\r\n    \"center_id\":4,\r\n    \"product_id\":2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -374,12 +342,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/addLoanRequest",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/addLoanRequest",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"addLoanRequest"
 					]
@@ -388,19 +359,22 @@
 			"response": []
 		},
 		{
-			"name": "viewLoanRequest",
+			"name": "viewAllLoanRequest",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewLoanRequest",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewAllLoanRequest",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
-						"viewLoanRequest"
+						"viewAllLoanRequest"
 					]
 				}
 			},
@@ -413,7 +387,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"from_loanuser_id\":2,\r\n    \"product_id\":1,\r\n    \"commission\":2,\r\n    \"center_id\":1\r\n}",
+					"raw": "{\r\n    \"from_user_id\":4,\r\n    \"to_user_id\":3,\r\n    \"product_id\":2,\r\n    \"commission\":8,\r\n    \"center_id\":4,\r\n    \"loanuser_id\":3\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -421,12 +395,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/addLoanSanctionDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/addLoanSanctionDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"addLoanSanctionDetails"
 					]
@@ -440,12 +417,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewAllLoanSanctionDetails",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewAllLoanSanctionDetails",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewAllLoanSanctionDetails"
 					]
@@ -459,12 +439,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewLoanSanctionDetailsByUserId/1/2",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewLoanSanctionDetailsByUserId/1/2",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewLoanSanctionDetailsByUserId",
 						"1",
@@ -480,12 +463,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/viewLoanSanctionDetailsByCenterId/1",
+					"raw": "http://baatcheet1-env.eba-3uzrj2rz.us-east-2.elasticbeanstalk.com/viewLoanSanctionDetailsByCenterId/1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"baatcheet1-env",
+						"eba-3uzrj2rz",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
 					],
-					"port": "9000",
 					"path": [
 						"viewLoanSanctionDetailsByCenterId",
 						"1"
